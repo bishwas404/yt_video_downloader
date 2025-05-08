@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sucessful url submission</title>
+</head>
+<body>
+  <div>you have successfully submited the url:{{website_url}}
+    The video title is : {{video_title}}
+    The video path is : {{video_path}}
+  </div>
+  <p>click the link below to download the video</p>
+  <p><a href="{% url 'download' file_name %}" download>Download {{file_name}}</a></p>
+  <a href="/">Go back to the submission page</a>
+</body>
+</html>

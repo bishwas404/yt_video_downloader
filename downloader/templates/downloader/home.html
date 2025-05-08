@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube video downloader</title>
+</head>
+<body>
+  <h>Submit your url here...</h>
+  {% if form.errors %}
+    <ul>
+      {% for field in form %}
+        {% for error in field.errors %}
+          <li>{{ error }}</li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <form method="POST">
+    {% csrf_token %}
+    <label for="website_url">Website URL:</label>
+    {{form.website_url}}
+    <button type="submit">Submit</button>
+
+  </form>
+</body>
+</html>
