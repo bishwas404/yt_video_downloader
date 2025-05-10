@@ -7,11 +7,10 @@
 </head>
 <body>
   <div>you have successfully submited the url:{{website_url}}
-    The video title is : {{video_title}}
-    The video path is : {{video_path}}
+
   </div>
   <p>click the link below to download the video</p>
-  <p><a href="{% url 'download' file_name %}" download>Download {{file_name}}</a></p>
+  <p><a href="{% url 'download' video_id %}" download>Download{{video_title}}</a></p>
   <a href="/">Go back to the submission page</a>
 </body>
 </html>

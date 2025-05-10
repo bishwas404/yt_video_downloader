@@ -5,7 +5,7 @@ from . import views
 
 urlpatterns = [
     path('',views.url_view, name='home'),
-    path('media/downloads/<str:file_name>/',views.download,name='download')
+    path('media/downloads/<str:video_id>/',views.download,name='download'),
 
 ]
 if settings.DEBUG:
